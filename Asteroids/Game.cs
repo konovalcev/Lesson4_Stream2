@@ -65,7 +65,7 @@ namespace Asteroids
 
         public static void Load()
         {
-            _objs = new BaseObject[30];
+            _objs = new BaseObject[25];
             Random rnd = new Random();
             _bullet = new Bullet(new Point(0, Height / 2), new Point(5, 0), new Size(4, 1));
             _asteroids = new Asteroid[3];
