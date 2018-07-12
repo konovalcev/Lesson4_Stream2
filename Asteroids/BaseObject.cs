@@ -13,6 +13,7 @@
 
 namespace Asteroids
 {
+    public delegate void Message();
     abstract class BaseObject : ICollision
     {
         protected Point Pos;
@@ -45,7 +46,7 @@ namespace Asteroids
         {
             Pos.Y = Pos.Y - delta;
         }
-        public Rectangle Rect => new Rectangle(Pos, Size);
         public bool Collision(ICollision obj) => Rect.IntersectsWith(obj.Rect);
+        public Rectangle Rect => new Rectangle(Pos, Size);        
     }
 }
